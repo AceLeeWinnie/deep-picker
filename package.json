@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha ./test.js -R spec",
-    "test-cov": "istanbul cover _mocha -- ./test.js -R spec"
+    "test-cov": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
   },
   "keywords": [
     "pick",
@@ -15,8 +15,17 @@
   "author": "ace.lee",
   "license": "ISC",
   "devDependencies": {
+    "coveralls": "^2.11.9",
     "istanbul": "0.4.3",
     "mocha": "2.4.5",
+    "mocha-lcov-reporter": "^1.2.0",
     "should": "8.3.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AceLeeWinnie/deep-picker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AceLeeWinnie/deep-picker/issues"
   }
 }
