@@ -1,0 +1,22 @@
+{
+  "name": "deep-picker",
+  "version": "0.0.1",
+  "description": "pick deeply with keyMap",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha ./test.js -R spec",
+    "test-cov": "istanbul cover _mocha -- ./test.js -R spec"
+  },
+  "keywords": [
+    "pick",
+    "deep",
+    "keyMap"
+  ],
+  "author": "ace.lee",
+  "license": "ISC",
+  "devDependencies": {
+    "istanbul": "0.4.3",
+    "mocha": "2.4.5",
+    "should": "8.3.1"
+  }
+}
